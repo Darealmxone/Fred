@@ -1,0 +1,288 @@
+
+
+body, html {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #F5Dfe6; /* Set a pastel pink background color */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  background: -webkit-linear-gradient(45deg, #f5dfe3 25%, #f7e5e8 25%, #f7e5e8 50%, #f5dfe3 50%, #f5dfe3 75%, #f7e5e8 75%, #f7e5e8);
+  background: -moz-linear-gradient(45deg, #f5dfe3 25%, #f7e5e8 25%, #f7e5e8 50%, #f5dfe3 50%, #f5dfe3 75%, #f7e5e8 75%, #f7e5e8);
+  background: -o-linear-gradient(45deg, #f5dfe3 25%, #f7e5e8 25%, #f7e5e8 50%, #f5dfe3 50%, #f5dfe3 75%, #f7e5e8 75%, #f7e5e8);
+  background: linear-gradient(45deg, #f5dfe3 25%, #f7e5e8 25%, #f7e5e8 50%, #f5dfe3 50%, #f5dfe3 75%, #f7e5e8 75%, #f7e5e8);
+  background-size: 100px 100px;
+}
+
+
+/* okay so far */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+.heart {
+  position: fixed;
+  top: -3vh;
+  transform: translateY(-6vh);
+  animation: fall 2s linear forwards;
+  opacity: 0.3;
+
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(105vh);
+  }
+}
+
+
+
+
+
+
+/* mouse star*/
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+.star {
+  transform-style: preserve-3d;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  color: red;
+}
+.star:before {
+  position: absolute;
+  content: '\2726';
+  color: inherit;
+  inset: 0;
+  //box-shadow: 0 0 1em .5em #a3c2;
+  //filter: drop-shadow(0 0 .5em white);
+  text-shadow: 0 0 .8em #fff5;
+}       
+
+/* button */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+
+        
+ 
+
+a{
+    position: relative;
+    display: inline-block;
+    padding: 30px 30px;
+    margin: 40px 0;
+    color: #ff66b2;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+
+   
+}
+a:hover{
+    background: #ff66b2;
+    color: #050801;
+    box-shadow: 0 0 5px #ff66b2,
+                0 0 25px #ff66b2,
+                0 0 50px #ff66b2,
+                0 0 200px #ff66b2;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+a:nth-child(1){
+    filter: hue-rotate(270deg);
+}
+a:nth-child(2){
+    filter: hue-rotate(110deg);
+}
+a span{
+    position: absolute;
+    display: block;
+  opacity: 0;
+  
+}
+
+a:hover span{
+    opacity: 1;
+}
+a span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#ff0000);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#ff0000);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+a span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#ff0000);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+
+
+a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#ff0000);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
+
+/* everything above works */
+
+/*cursor pink shit */
+
+:root {
+  --glow-rgb: 239 42 201;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.glow-point {
+  position: absolute;
+  box-shadow: 0rem 0rem 1.2rem 0.6rem rgb(var(--glow-rgb));
+  pointer-events: none;
+}
+
+.star {
+  transform-style: preserve-3d;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  color: red;
+}
+
+.star:before {
+  position: absolute;
+  content: '\2726';
+  color: inherit;
+  inset: 0;
+  /* box-shadow: 0 0 1em .5em #a3c2; */
+  /* filter: drop-shadow(0 0 .5em white); */
+  text-shadow: 0 0 .8em #fff5;
+}
+
+@keyframes fall-1 {
+  0% {
+    transform: translate(0px, 0px) rotateX(45deg) rotateY(30deg) rotateZ(0deg) scale(0.25);
+    opacity: 0;
+  }
+  
+  5% {
+    transform: translate(10px, -10px) rotateX(45deg) rotateY(30deg) rotateZ(0deg) scale(1);
+    opacity: 1;
+  }
+  
+  100% {
+    transform: translate(25px, 200px) rotateX(180deg) rotateY(270deg) rotateZ(90deg) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes fall-2 {
+  0% {
+    transform: translate(0px, 0px) rotateX(-20deg) rotateY(10deg) scale(0.25);
+    opacity: 0;
+  }
+  
+  10% {
+    transform: translate(-10px, -5px) rotateX(-20deg) rotateY(10deg) scale(1);
+    opacity: 1;
+  }
+  
+  100% {
+    transform: translate(-10px, 160px) rotateX(-90deg) rotateY(45deg) scale(0.25);
+    opacity: 0;
+  }
+}
+
+@keyframes fall-3 {
+  0% {
+    transform: translate(0px, 0px) rotateX(0deg) rotateY(45deg) scale(0.5);
+    opacity: 0;
+  }
+  
+  15% {
+    transform: translate(7px, 5px) rotateX(0deg) rotateY(45deg) scale(1);
+    opacity: 1;
+  }
+  
+  100% {
+    transform: translate(20px, 120px) rotateX(-180deg) rotateY(-90deg) scale(0.5);
+    opacity: 0;
+  }
+}
+
+
+/* so far works */
+/* i love you */
+
+#randomTextContainer {
+  margin-top: 30px;
+  font-family: 'cursive', sans-serif; /* Use the cursive font, fallback to a generic sans-serif font if not available */
+}
+
+

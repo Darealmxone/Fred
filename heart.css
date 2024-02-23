@@ -1,0 +1,235 @@
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: tranparent;
+  z-index: 1;
+  
+}
+
+.typewrite > .wrap { 
+  color: #000;
+  font-family: 'Swanky and Moo Moo', cursive;
+  
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+html {
+  background-color: #AEC6CF;
+  margin: 0;
+  height: 100%;
+}
+
+
+#myLove {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  background: #AEC6CF; /* Ensures no background color or image is applied */
+}
+
+
+
+/* bla bla bla */
+.fancy-button {
+  --fancy-button-gradient-0: #8D49FD;
+  --fancy-button-gradient-50: #7F56F3;
+  --fancy-button-gradient-100: #5691F3;
+  --fancy-button-inner-shadow-top: rgba(233, 209, 255, 0.2);
+  --fancy-button-inner-shadow-top-lg: rgba(9, 12, 60, 0.1);
+  --fancy-button-inner-shadow-bottom: rgba(137, 222, 246, 0.3);
+  --fancy-button-shine-top: #E9D1FF;
+  --fancy-button-shine-bottom: #ADFFF9;
+
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 21px;
+  text-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  margin: 0;
+  appearance: none;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 25px;
+  color: #fff;
+  background-image: linear-gradient(to bottom, var(--fancy-button-gradient-0) 0%, var(--fancy-button-gradient-50) 50%, var(--fancy-button-gradient-100) 100%);
+  box-shadow: 0px 4px 12px rgba(9, 12, 60, 0.15), 0px 2px 8px rgba(9, 12, 60, 0.15), 0px 1px 3px var(--fancy-button-inner-shadow-top-lg), inset 0px 1px 1px var(--fancy-button-inner-shadow-top), inset 0px -1px 3px var(--fancy-button-inner-shadow-bottom);
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    border-radius: inherit;
+    will-change: transform;
+  }
+
+  &:before {
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--fancy-button-shine-top);
+    width: 96px;
+    height: 6px;
+    top: -3px;
+    opacity: .6;
+    filter: blur(6px);
+    transition: opacity .25s;
+  }
+
+  &:after {
+    inset: 0;
+    background-image: url("https://assets.codepen.io/165585/noise_1.png");
+    background-size: cover;
+    z-index: 2;
+    opacity: .3;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+
+  span {
+    display: block;
+    padding: 12px 24px;
+    border-radius: inherit;
+    overflow: hidden;
+    position: relative;
+    background-image: linear-gradient(to bottom, var(--fancy-button-shine-top), transparent 8px);
+    background-position: 0 -6px;
+    background-repeat: no-repeat;
+    z-index: 1;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      background-color: var(--fancy-button-shine-bottom);
+      transition: opacity .25s, transform .25s;
+      will-change: transform;
+    }
+
+    &:before {
+      width: 92px;
+      height: 8px;
+      bottom: -4px;
+      opacity: .75;
+      filter: blur(6px);
+    }
+
+    &:after {
+      width: 112px;
+      height: 1px;
+      bottom: 0;
+      opacity: .9;
+      filter: blur(1px);
+    }
+  }
+
+  &:hover {
+    span {
+      &:before {
+        opacity: .8;
+      }
+
+      &:before {
+        transform: translateX(-50%) scale(1.25);
+      }
+
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: inherit;
+
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+// Center
+body {
+  min-height: 100vh;
+  display: flex;
+  font-family: 'Inter', Arial;
+  justify-content: center;
+  align-items: center;
+  background-color: #0A0517;
+  overflow: hidden;
+
+  &:before,
+  &:after {
+    content: '';
+    background-color: rgba(80, 129, 255, 0.35);
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    will-change: transform;
+  }
+
+  &:before {
+    right: 0;
+    top: 0;
+    width: 70%;
+    height: 40%;
+    transform: translate(30%, 0) rotate(-45deg);
+    filter: blur(175px);
+  }
+
+  &:after {
+    left: 50%;
+    bottom: 50%;
+    width: 40%;
+    height: 40%;
+    transform: translate(-80%, 80%);
+    filter: blur(300px);
+  }
+}
+
+/* Add your existing .fancy-button styles here */
+
+/* Position the button at the bottom center of the page */
+#delayedButton {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) scale(0); /* Start as a tiny dot */
+  display: block; /* Set to block to make it part of the layout */
+  opacity: 0; /* Start as invisible */
+  animation: expandButton 0.5s ease-in-out 5s forwards; /* Animation */
+}
+
+/* Keyframes for the expandButton animation */
+@keyframes expandButton {
+  0% {
+    transform: translateX(-50%) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Rest of your CSS */
